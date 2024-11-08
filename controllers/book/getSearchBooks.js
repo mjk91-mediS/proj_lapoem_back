@@ -1,4 +1,4 @@
-const database = require('../database/database');
+const database = require('../../database/database');
 
 // 검색 API 로직
 exports.getSearchBooks = async (req, res) => {

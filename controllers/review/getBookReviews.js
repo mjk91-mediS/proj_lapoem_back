@@ -1,4 +1,4 @@
-const database = require('../database/database');
+const database = require('../../database/database');
 
 // 특정 책에 대한 리뷰 목록을 가져오는 컨트롤러
 const getBookReviews = async (req, res) => {
@@ -48,7 +48,9 @@ const getReviewById = async (req, res) => {
 
     // bookId 또는 reviewId가 없을 경우 오류 반환
     if (!bookId || !reviewId) {
-      return res.status(400).json({ error: 'Book ID and Review ID are required.' });
+      return res
+        .status(400)
+        .json({ error: 'Book ID and Review ID are required.' });
     }
 
     // 특정 책에 대한 특정 리뷰와 작성자 정보를 가져오기 위한 쿼리
@@ -82,9 +84,10 @@ const getReviewById = async (req, res) => {
     res.status(200).json(result.rows[0]);
   } catch (error) {
     console.error('Error fetching review:', error);
-    res.status(500).json({ error: 'An error occurred while fetching the review.' });
+    res
+      .status(500)
+      .json({ error: 'An error occurred while fetching the review.' });
   }
 };
-
 
 module.exports = { getBookReviews, getReviewById };

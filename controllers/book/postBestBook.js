@@ -1,4 +1,4 @@
-const database = require("../database/database");
+const database = require('../../database/database');
 
 exports.registerBestSeller = async (req, res) => {
   const { book_id, book_best_start, book_best_end } = req.body;
@@ -6,7 +6,7 @@ exports.registerBestSeller = async (req, res) => {
   // 필수 필드 검증
   if (!book_id || !book_best_start || !book_best_end) {
     return res.status(400).json({
-      message: "book_id, book_best_start, and book_best_end are required",
+      message: 'book_id, book_best_start, and book_best_end are required',
     });
   }
 
@@ -32,9 +32,9 @@ exports.registerBestSeller = async (req, res) => {
 
     return res.status(201).json(newBestSeller);
   } catch (error) {
-    console.error("Error registering best seller:", error);
+    console.error('Error registering best seller:', error);
     return res.status(500).json({
-      message: "Failed to register best seller",
+      message: 'Failed to register best seller',
       error: error.message,
     });
   }

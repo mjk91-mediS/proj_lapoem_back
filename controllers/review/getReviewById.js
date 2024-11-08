@@ -1,4 +1,4 @@
-const database = require('../database/database');
+const database = require('../../database/database');
 
 // 특정 리뷰 ID에 따른 리뷰 정보 가져오는 컨트롤러
 const getBookReviewById = async (req, res) => {

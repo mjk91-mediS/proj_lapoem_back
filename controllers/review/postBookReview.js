@@ -1,4 +1,4 @@
-const database = require('../database/database');
+const database = require('../../database/database');
 const jwt = require('jsonwebtoken');
 
 // ------------------리뷰 작성---------------------------

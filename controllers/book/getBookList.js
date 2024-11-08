@@ -1,4 +1,4 @@
-const database = require('../database/database');
+const database = require('../../database/database');
 
 // 북리스트----------------------------------------------------
 exports.getBookList = async (req, res) => {

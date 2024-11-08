@@ -1,4 +1,4 @@
-const database = require('../database/database');
+const database = require('../../database/database');
 
 const getBookDetail = async (req, res) => {
   const { bookId } = req.params;
